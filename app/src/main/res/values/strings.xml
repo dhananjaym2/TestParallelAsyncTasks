@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Test Parallel Async Tasks</string>
+    <string name="action_settings">Settings</string>
+    <string name="StartAsyncTasks">Start AsyncTasks</string>
+    <string name="ClickAboveButtonToStartAndThenCheckAppLogs">Click above button to start and then check app logs&#8230;</string>
+    <string name="Starting">Starting&#8230;</string>
+</resources>
