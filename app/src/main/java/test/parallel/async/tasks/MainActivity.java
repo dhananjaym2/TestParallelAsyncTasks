@@ -1,5 +1,6 @@
 package test.parallel.async.tasks;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -32,7 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     .setAction(android.R.string.ok, null).show();
             for (int i = 0; i < 10; i++) {
                 SampleAsyncTaskWithDelay sampleAsyncTaskWithDelay = new SampleAsyncTaskWithDelay(i);
-                sampleAsyncTaskWithDelay.execute();
+                sampleAsyncTaskWithDelay.execute(); // to run async tasks in serial fashion, one at a time.
+//                sampleAsyncTaskWithDelay.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);// to run multiple async tasks in parallel
             }
             Log.v(logTag, "after for loop of AsyncTasks");
         }
